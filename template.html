@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>
+  <link href="template.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto p-8">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <!-- Header -->
+      <div class="bg-blue-600 text-white p-4 flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+        <h1 class="text-xl font-semibold">AQM Capacity Overview</h1>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+        <!-- Total Licensed Hours -->
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <h3 class="text-blue-700 font-medium">Total Licensed Hours (2024)</h3>
+          <div class="text-4xl font-bold text-blue-600 mt-2">280K</div>
+          <div class="text-blue-600 text-sm">CBG: 80K + CG: 200K</div>
+        </div>
+
+        <!-- Current Utilization -->
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h3 class="text-green-700 font-medium">Current Utilization</h3>
+          <div class="text-4xl font-bold text-green-600 mt-2">165K</div>
+          <div class="text-green-600 text-sm">59% of licensed capacity</div>
+        </div>
+
+        <!-- 2025 Forecast -->
+        <div class="bg-purple-50 p-4 rounded-lg">
+          <h3 class="text-purple-700 font-medium">2025 Forecast</h3>
+          <div class="text-4xl font-bold text-purple-600 mt-2">~911K</div>
+          <div class="text-purple-600 text-sm">225% increase from current</div>
+        </div>
+      </div>
+
+      <!-- Tables Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+        <!-- Current Status Table -->
+        <div class="bg-white rounded-lg border">
+          <div class="p-4 border-b flex items-center">
+            <svg class="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h2 class="text-lg font-semibold">Current Status (2024)</h2>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Unit</th>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Licensed</th>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Used</th>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Utilization</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y">
+                <tr>
+                  <td class="px-4 py-2">CBG</td>
+                  <td class="px-4 py-2">80K</td>
+                  <td class="px-4 py-2">55K</td>
+                  <td class="px-4 py-2 text-green-600">69%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2">CG</td>
+                  <td class="px-4 py-2">200K</td>
+                  <td class="px-4 py-2">110K</td>
+                  <td class="px-4 py-2 text-yellow-600">55%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2">DV</td>
+                  <td class="px-4 py-2">0</td>
+                  <td class="px-4 py-2">0</td>
+                  <td class="px-4 py-2">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2025 Forecast Table -->
+        <div class="bg-white rounded-lg border">
+          <div class="p-4 border-b flex items-center">
+            <svg class="w-5 h-5 mr-2 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+            </svg>
+            <h2 class="text-lg font-semibold">2025 Forecast</h2>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Unit</th>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Hours</th>
+                  <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Change</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y">
+                <tr>
+                  <td class="px-4 py-2">CBG Sales</td>
+                  <td class="px-4 py-2">361K</td>
+                  <td class="px-4 py-2 text-green-600">+556%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2">CBG CSO</td>
+                  <td class="px-4 py-2">~400-500K</td>
+                  <td class="px-4 py-2 text-green-600">+800%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2">CG</td>
+                  <td class="px-4 py-2">120K</td>
+                  <td class="px-4 py-2 text-green-600">+9%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-2">DV</td>
+                  <td class="px-4 py-2">30K</td>
+                  <td class="px-4 py-2 text-green-600">New</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast Assumptions -->
+      <div class="p-6">
+        <h2 class="text-xl font-semibold mb-4">Forecast Assumptions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- CBG Calculations -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-medium mb-2">CBG Calculations</h3>
+            <ul class="space-y-2 text-sm">
+              <li>• Current: 182 extensions in use</li>
+              <li>• Sales forecast based on:
+                <ul class="ml-4 mt-1">
+                  <li>- 800 sales agents</li>
+                  <li>- 100-120 mins call duration per working day</li>
+                </ul>
+              </li>
+              <li>• CSO volume expected to increase significantly</li>
+            </ul>
+          </div>
+
+          <!-- CG & DV Projections -->
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-medium mb-2">CG & DV Projections</h3>
+            <ul class="space-y-2 text-sm">
+              <li>• CG: Additional 10K hours from Commercial Corp</li>
+              <li>• DV calculation:
+                <ul class="ml-4 mt-1">
+                  <li>- 19,000 calls/month</li>
+                  <li>- 8 mins average call duration</li>
+                  <li>- Formula: 19,000 * 12 months * 8/60 = 30K hours</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Note -->
+      <div class="bg-blue-50 p-4 m-6 rounded-lg">
+        <p class="text-blue-700 text-sm"><strong>Note:</strong> More Voice Channels are expected to be digital-transformed into Digital Channels with HKT Digital AQM, which may affect these projections.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
